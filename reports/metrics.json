@@ -1,0 +1,181 @@
+{
+  "dataset": "UCI RealWaste",
+  "split": {
+    "train": 3801,
+    "validation": 475,
+    "test": 476
+  },
+  "test_accuracy": 0.8613445378151261,
+  "test_macro_f1": 0.8613504380461043,
+  "classification_report": {
+    "cardboard": {
+      "precision": 0.8035714285714286,
+      "recall": 0.9782608695652174,
+      "f1-score": 0.8823529411764706,
+      "support": 46.0
+    },
+    "food_organics": {
+      "precision": 0.9,
+      "recall": 0.8780487804878049,
+      "f1-score": 0.8888888888888888,
+      "support": 41.0
+    },
+    "glass": {
+      "precision": 0.875,
+      "recall": 0.8333333333333334,
+      "f1-score": 0.8536585365853658,
+      "support": 42.0
+    },
+    "metal": {
+      "precision": 0.9264705882352942,
+      "recall": 0.7974683544303798,
+      "f1-score": 0.8571428571428571,
+      "support": 79.0
+    },
+    "miscellaneous_trash": {
+      "precision": 0.7045454545454546,
+      "recall": 0.62,
+      "f1-score": 0.6595744680851063,
+      "support": 50.0
+    },
+    "paper": {
+      "precision": 0.96,
+      "recall": 0.96,
+      "f1-score": 0.96,
+      "support": 50.0
+    },
+    "plastic": {
+      "precision": 0.8764044943820225,
+      "recall": 0.8387096774193549,
+      "f1-score": 0.8571428571428571,
+      "support": 93.0
+    },
+    "textile_trash": {
+      "precision": 0.7380952380952381,
+      "recall": 0.96875,
+      "f1-score": 0.8378378378378378,
+      "support": 32.0
+    },
+    "vegetation": {
+      "precision": 0.9148936170212766,
+      "recall": 1.0,
+      "f1-score": 0.9555555555555556,
+      "support": 43.0
+    },
+    "accuracy": 0.8613445378151261,
+    "macro avg": {
+      "precision": 0.8554423134278573,
+      "recall": 0.8749523350262323,
+      "f1-score": 0.8613504380461043,
+      "support": 476.0
+    },
+    "weighted avg": {
+      "precision": 0.8644912311778095,
+      "recall": 0.8613445378151261,
+      "f1-score": 0.8596498588396511,
+      "support": 476.0
+    }
+  },
+  "confusion_matrix": [
+    [
+      45,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0
+    ],
+    [
+      1,
+      36,
+      0,
+      1,
+      1,
+      0,
+      0,
+      0,
+      2
+    ],
+    [
+      2,
+      0,
+      35,
+      2,
+      1,
+      0,
+      2,
+      0,
+      0
+    ],
+    [
+      2,
+      0,
+      1,
+      63,
+      6,
+      1,
+      5,
+      1,
+      0
+    ],
+    [
+      2,
+      3,
+      0,
+      0,
+      31,
+      1,
+      3,
+      8,
+      2
+    ],
+    [
+      2,
+      0,
+      0,
+      0,
+      0,
+      48,
+      0,
+      0,
+      0
+    ],
+    [
+      2,
+      1,
+      4,
+      2,
+      4,
+      0,
+      78,
+      2,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      31,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      43
+    ]
+  ],
+  "warning": "Image-level split; not a site-held-out generalization result."
+}

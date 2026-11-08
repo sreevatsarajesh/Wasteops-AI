@@ -37,9 +37,9 @@ def main():
             from PIL import Image
             image=Image.open(path).convert('RGB'); label=int(y[int(self.indices[i])]); return self.tf(image),label
     device=torch.device('cuda' if torch.cuda.is_available() else ('mps' if torch.backends.mps.is_available() else 'cpu'))
-    train_loader=DataLoader(DatasetView(ds,train_idx,train_tf),batch_size=args.batch_size,shuffle=True,num_workers=args.workers)
-    val_loader=DataLoader(DatasetView(ds,val_idx,eval_tf),batch_size=args.batch_size,shuffle=False,num_workers=args.workers)
-    test_loader=DataLoader(DatasetView(ds,test_idx,eval_tf),batch_size=args.batch_size,shuffle=False,num_workers=args.workers)
+    train_loader = DataLoader(DatasetView(ds, train_idx, train_tf), batch_size=args.batch_size, shuffle=True, num_workers=0)
+    val_loader = DataLoader(DatasetView(ds, val_idx, eval_tf), batch_size=args.batch_size, shuffle=False, num_workers=0)
+    test_loader=DataLoader(DatasetView(ds,test_idx,eval_tf),batch_size=args.batch_size,shuffle=False,num_workers=0)
     model=models.mobilenet_v3_small(weights=models.MobileNet_V3_Small_Weights.DEFAULT)
     model.classifier[3]=nn.Linear(model.classifier[3].in_features,len(CLASSES));model.to(device)
     weights=np.bincount(y[train_idx],minlength=len(CLASSES)); class_weights=torch.tensor(len(train_idx)/(len(CLASSES)*np.maximum(weights,1)),dtype=torch.float32,device=device)
